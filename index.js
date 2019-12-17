@@ -166,10 +166,11 @@ export default class OTPInputView extends Component {
     }
 
     blurAllFields = () => {
-       // this.fields.forEach(field => field.blur())
+        this.fields.forEach(field => field.blur())
         this.setState({
             selectedIndex: -1,
         })
+        this.fields[4].focus()
     }
 
     renderOneInputField = ( _ , index ) => {
