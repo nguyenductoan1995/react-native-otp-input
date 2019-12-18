@@ -81,7 +81,7 @@ export default class OTPInputView extends Component {
     }
 
     handleKeyboardDidHide = () => {
-        this.blurAllFields() 
+     //   this.blurAllFields() 
     }
 
     notifyCodeChanged = () => {
@@ -170,7 +170,6 @@ export default class OTPInputView extends Component {
         this.setState({
             selectedIndex: -1,
         })
-        this.fields[4].focus()
     }
 
     renderOneInputField = ( _ , index ) => {
