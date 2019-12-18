@@ -166,7 +166,9 @@ export default class OTPInputView extends Component {
     }
 
     blurAllFields = () => {
-      //  this.fields.forEach(field => field.blur())
+        const { pinCount } = this.props
+        this.fields.forEach(field => field.blur())
+        this.fields[pinCount-1].focus()
         this.setState({
             selectedIndex: -1,
         })
