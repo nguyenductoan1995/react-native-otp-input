@@ -82,6 +82,7 @@ export default class OTPInputView extends Component {
 
     handleKeyboardDidHide = () => {
      //   this.blurAllFields() 
+     this.focusField(pinCount - 1)
     }
 
     notifyCodeChanged = () => {
