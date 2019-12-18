@@ -81,8 +81,7 @@ export default class OTPInputView extends Component {
     }
 
     handleKeyboardDidHide = () => {
-        const { pinCount } = this.props
-     //   this.blurAllFields() 
+       this.blurAllFields() 
     }
 
     notifyCodeChanged = () => {
@@ -101,7 +100,7 @@ export default class OTPInputView extends Component {
                 this.setState({
                     digits: code.split(""),
                 }, () => {
-                 //   this.blurAllFields()
+                    this.blurAllFields()
                     this.notifyCodeChanged()
                 })
             }
@@ -139,7 +138,7 @@ export default class OTPInputView extends Component {
         if (result.length >= pinCount) {
             onCodeFilled && onCodeFilled(result)
             this.focusField(pinCount - 1)
-           // this.blurAllFields()
+            this.blurAllFields()
         } else {
             if (text.length > 0 && index < pinCount - 1) {
                 this.focusField(index + 1)
@@ -167,7 +166,7 @@ export default class OTPInputView extends Component {
     }
 
     blurAllFields = () => {
-        this.fields.forEach(field => field.blur())
+      //  this.fields.forEach(field => field.blur())
         this.setState({
             selectedIndex: -1,
         })
